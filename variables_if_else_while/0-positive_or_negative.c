@@ -1,16 +1,20 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-/* Affichage de n sous condition */
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ * Description: Génère un nombre aléatoire,
+ * Puis affiche le nombre sous condition
+ * Parameter: n nombre aléatoire
+ * Return: Always 0 (Success)
+*/
+
 int main(void)
 {
 	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
 	if (n < 0)
 		printf("%d is negative \n", n);
 	if (n == 0)
