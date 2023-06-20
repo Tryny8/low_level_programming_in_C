@@ -11,10 +11,7 @@ void print_alphabet(void)
 
 	for (a = 97; a <= 122; a++)
 	{
-		if (a != 101 && a != 113)
-		{
-			_putchar(a);
-		}
+		_putchar(a);
 	}
 	_putchar(10);
 }
