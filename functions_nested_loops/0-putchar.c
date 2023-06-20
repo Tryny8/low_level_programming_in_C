@@ -1,10 +1,7 @@
-#include <main.h>
+#include "main.h"
 /**
  * main - Entry point
  * Description: Affiche _putchar avec fontion _putchar
- *
- * Description function: _putchar - writes the character c to stdout
- * @c: The character to print
  *
  * Return: Always 0 (Success)
  */
