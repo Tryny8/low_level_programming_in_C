@@ -1,7 +1,4 @@
 #include <main.h>
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
 /**
  * main - Entry point
  * Description: Affiche _putchar avec fontion _putchar
@@ -11,7 +8,6 @@
  *
  * Return: Always 0 (Success)
  */
-int _putchar(char c)
 
 int main(void)
 {
