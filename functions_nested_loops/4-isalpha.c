@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower - checks for lowercase character
+ * _isalpha - checks for lowercase and uppercase character
  * @c: The charater c to stdoud
  *
  * Return: On success 0.
