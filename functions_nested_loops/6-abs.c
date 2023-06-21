@@ -22,6 +22,7 @@ int _abs(int n)
 	}
 	else if (n < 0)
 	{
+		return (1);
 		printf("%d", sign_number);
 	}
 	return (0);
