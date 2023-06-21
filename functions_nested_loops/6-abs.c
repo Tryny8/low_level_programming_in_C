@@ -14,15 +14,15 @@ int _abs(int n)
 
 	if (n > 0)
 	{
-		_putchar(n);
+		printf("%d", n);
 	}
 	else if (n == 0)
 	{
-		_putchar(n);
+		printf("%d", n);
 	}
 	else if (n < 0)
 	{
-		_putchar(sign_number);
+		printf("%d", sign_number);
 	}
 	return (0);
 }
