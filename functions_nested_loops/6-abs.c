@@ -10,7 +10,7 @@ int _abs(int n)
 {
 	int sign_number;
 
-	sign_number = -n;
+	sign_number = n * (-1);
 
 	if (n > 0)
 	{
