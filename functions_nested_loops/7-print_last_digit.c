@@ -19,12 +19,12 @@ int print_last_digit(int n)
 	if (c > 0)
 	{
 		printf("%d", c);
-		return (c);
+		return (0);
 	}
 	else if (c == 0)
 	{
 		printf("%d", c);
-		return (c);
+		return (0);
 	}
 	else if (c < 0)
 	{
