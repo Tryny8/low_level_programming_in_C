@@ -18,18 +18,18 @@ int print_last_digit(int n)
 
 	if (c > 0)
 	{
-		return (c);
 		printf("%d", c);
+		return (c);
 	}
 	else if (c == 0)
 	{
-		return (c);
 		printf("%d", c);
+		return (c);
 	}
 	else if (c < 0)
 	{
-		return (sign_number);
 		printf("%d", sign_number);
+		return (sign_number);
 	}
 	return (0);
 }
