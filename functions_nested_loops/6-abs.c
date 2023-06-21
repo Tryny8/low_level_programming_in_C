@@ -6,23 +6,23 @@
  * Return: On success 0.
  */
 
-int _abs (int n)
+int _abs(int n)
 {
 	int sign_number;
 
-	sign_number = n;
+	sign_number = -n;
 
-	if (sign_number > 0)
+	if (n > 0)
 	{
 		_putchar(n);
 	}
-	else if (sign_number == 0)
+	else if (n == 0)
 	{
 		_putchar(n);
 	}
-	else if (sign_number < 0)
+	else if (n < 0)
 	{
-		_putchar(n);
+		_putchar(sign_number);
 	}
 	return (0);
 }
