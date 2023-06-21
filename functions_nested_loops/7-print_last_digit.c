@@ -14,18 +14,20 @@ int print_last_digit(int n)
 
 	/* sign_number = n * (-1); */
 	c = n % 10;
-
-	if (c > 0)
-	{
-		printf("Last digit of %d is %d\n", n, c);
-	}
-	else if (c == 0)
-	{
-		printf("Last digit of %d is %d\n", n, c);
-	}
-	else if (c < 0)
-	{
-		printf("Last digit of %d is %d\n", n, c);
-	}
-	return (0);
+	return (c);
+/**
+ *	if (c > 0)
+ *	{
+ *		printf("Last digit of %d is %d\n", n, c);
+ *	}
+ *	else if (c == 0)
+ *	{
+ *		printf("Last digit of %d is %d\n", n, c);
+ *	}
+ *	else if (c < 0)
+ *	{
+ *		printf("Last digit of %d is %d\n", n, c);
+ *	}
+ *	return (0);
+ */
 }
