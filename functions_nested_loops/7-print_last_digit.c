@@ -8,26 +8,28 @@
 
 int print_last_digit(int n)
 {
-	/* int sign_number; */
+	int sign_number;
 
 	int c;
 
-	/* sign_number = n * (-1); */
 	c = n % 10;
-	return (c);
-/**
- *	if (c > 0)
- *	{
- *		printf("Last digit of %d is %d\n", n, c);
- *	}
- *	else if (c == 0)
- *	{
- *		printf("Last digit of %d is %d\n", n, c);
- *	}
- *	else if (c < 0)
- *	{
- *		printf("Last digit of %d is %d\n", n, c);
- *	}
- *	return (0);
- */
+
+	sign_number = c * (-1);
+
+	if (c > 0)
+	{
+		printf("Last digit of %d is %d\n", n, c);
+		return (c);
+	}
+	else if (c == 0)
+	{
+		printf("Last digit of %d is %d\n", n, c);
+		return (c);
+	}
+	else if (c < 0)
+	{
+		printf("Last digit of %d is %d\n", n, sign_number);
+		return (sign_number);
+	}
+	return (0);
 }
