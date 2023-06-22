@@ -18,17 +18,17 @@ int print_last_digit(int n)
 
 	if (c > 0)
 	{
-		printf("%d", c);
+		_putchar(c);
 		return (c);
 	}
 	else if (c == 0)
 	{
-		printf("%d", c);
+		_putchar(c);
 		return (c);
 	}
 	else if (c < 0)
 	{
-		printf("%d", sign_number);
+		_putchar(sign_number);
 		return (sign_number);
 	}
 	return (0);
