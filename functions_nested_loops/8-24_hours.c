@@ -23,6 +23,7 @@ void jack_bauer(void)
 				else
 				{
 					minute = 0;
+					break;
 				}
 			}
 			else
