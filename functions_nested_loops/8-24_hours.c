@@ -18,9 +18,7 @@ void jack_bauer(void)
 			{
 				if (minute != 60)
 				{
-					_putchar(heure);
-					_putchar(minute);
-					_putchar('\n');
+					printf("%d:%d\n", heure, minute);
 				}
 				else
 				{
