@@ -1,6 +1,16 @@
 CC = gcc
 SRC = main.c school.c
+
 all : school
 
-school : $(SCR)
-	$(CC) $(SCR) -o school
+school : $(SRC)
+	$(CC) $(SRC) -o school
+	
+#main.o : main.c
+#	$(CC) -c main.c -o main.o
+
+#school.o : school.c
+#	$(CC) -c school.c -o school.o
+
+#school : main.o school.o
+#	$(CC) main.o school.o -o school
