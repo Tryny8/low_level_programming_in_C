@@ -16,7 +16,18 @@ void times_table(void)
 		for (m = 0; m <= 9; m++)
 		{
 			resultat = (m * t);
-			printf("%3d, ", resultat);
+			if (m == 0)
+			{
+				printf("%d,", resultat);
+			}
+			else if (m > 0 && m < 9)
+			{
+				printf("%3d,", resultat);
+			}
+			else if (m == 9)
+			{
+				printf("%3d", resultat);
+			}
 			if (m != 9)
 			{
 				continue;
