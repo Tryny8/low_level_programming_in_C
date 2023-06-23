@@ -1,0 +1,81 @@
+#<cible> : <dependance>
+#	<commande>
+
+# NOM = VALEUR
+# CC / CXX
+# CFFLAGS / CXXFLAGS
+# LDFLAGS
+# EXEC
+# $(variable)
+
+# ----------------------------------------
+CC = gcc
+EXEC = prog
+SRC = $(wildcard *.c)
+FICHIERC = main.c player.c
+OBJ = $(SRC:.c=.o)
+FICHIERO = main.o player.o
+WINDOWS = yes
+
+# ----------------------------------------
+all : $(EXEC)
+
+# ----------------------------------------
+#  Règle sans variable
+prog : main.o player.o
+	gcc -o prog main.o player.o
+
+main.o : main.c
+	gcc -o main.o -c main.c
+
+player.o : player.c
+	gcc -o player.o -c player.c
+
+# ----------------------------------------
+#  Règle avec variable
+$(EXEC) : main.o main.o
+	$(CC) -o $(EXEC) main.o player.o
+
+main.o : main.c
+	$(CC) -o main.o -c main.c
+
+player.o : player.c
+	$(CC) -o player.o -c player.c
+
+# ----------------------------------------
+#  Règle générique
+%.o : %.c
+	$(CC) -o $(OBJ) -c $(SRC)
+
+$(EXEC) : $(OBJ)
+	$(CC) -o $(EXEC) $(OBJ)
+# ----------------------------------------
+#  Règle générique avec var spéciale
+%.o : %.c
+	$(CC) -o $@ -c $<
+
+$(EXEC) : $(OBJ)
+	$(CC) -o $@ $^
+
+# ----------------------------------------
+clean :
+	rm -rf *.o
+
+mrproper : clean
+	rm -fr $(EXEC)
+
+zip :
+
+# Variable spéciales
+# $@ nom cible
+# $< nom première dépendance
+# $^ liste dépendance
+# $? liste dépendance plus récente que la cible
+# $* nom fichier, sans son extension
+
+# ----------------------------------------
+# Condition
+ifeq ($(WINDOWS), yes)
+	EXEC = prog.exe
+else
+	EXEC = prog
