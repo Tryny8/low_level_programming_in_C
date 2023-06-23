@@ -16,8 +16,9 @@ void times_table(void)
 		for (m = 0; m <= 9; m++)
 		{
 			resultat = (m * t);
-			printf("%02d", resultat);
-			t = t + 1;
+			printf("%02d, ", resultat);
 		}
+		t = t + 1;
+		_putchar('\n');
 	}
 }
