@@ -9,62 +9,62 @@
 # $(variable)
 
 # ----------------------------------------
-CC = gcc
-EXEC = prog
-SRC = $(wildcard *.c)
-FICHIERC = main.c player.c
-OBJ = $(SRC:.c=.o)
-FICHIERO = main.o player.o
-WINDOWS = yes
+# CC = gcc
+# EXEC = prog
+# SRC = $(wildcard *.c)
+# FICHIERC = main.c player.c
+# OBJ = $(SRC:.c=.o)
+# FICHIERO = main.o player.o
+# WINDOWS = yes
 
 # ----------------------------------------
-all : $(EXEC)
+# all : $(EXEC)
 
 # ----------------------------------------
 #  Règle sans variable
-prog : main.o player.o
-	gcc -o prog main.o player.o
+# prog : main.o player.o
+#	gcc -o prog main.o player.o
 
-main.o : main.c
-	gcc -o main.o -c main.c
+# main.o : main.c
+#	gcc -o main.o -c main.c
 
-player.o : player.c
-	gcc -o player.o -c player.c
+# player.o : player.c
+#	gcc -o player.o -c player.c
 
 # ----------------------------------------
 #  Règle avec variable
-$(EXEC) : main.o main.o
-	$(CC) -o $(EXEC) main.o player.o
+# $(EXEC) : main.o main.o
+#	$(CC) -o $(EXEC) main.o player.o
 
-main.o : main.c
-	$(CC) -o main.o -c main.c
+# main.o : main.c
+#	$(CC) -o main.o -c main.c
 
-player.o : player.c
-	$(CC) -o player.o -c player.c
+# player.o : player.c
+#	$(CC) -o player.o -c player.c
 
 # ----------------------------------------
 #  Règle générique
-%.o : %.c
-	$(CC) -o $(OBJ) -c $(SRC)
+# %.o : %.c
+#	$(CC) -o $(OBJ) -c $(SRC)
 
-$(EXEC) : $(OBJ)
-	$(CC) -o $(EXEC) $(OBJ)
+# $(EXEC) : $(OBJ)
+#	$(CC) -o $(EXEC) $(OBJ)
 # ----------------------------------------
 #  Règle générique avec var spéciale
-%.o : %.c
-	$(CC) -o $@ -c $<
+# %.o : %.c
+#	$(CC) -o $@ -c $<
 
-$(EXEC) : $(OBJ)
-	$(CC) -o $@ $^
+# $(EXEC) : $(OBJ)
+# 	$(CC) -o $@ $^
 
 # ----------------------------------------
-clean :
-	rm -rf *.o
+# clean :
+#	rm -rf *.o
 
-mrproper : clean
-	rm -fr $(EXEC)
+# mrproper : clean
+# 	rm -fr $(EXEC)
 
-zip :
+# zip :
 
 # Variable spéciales
 # $@ nom cible
@@ -75,7 +75,7 @@ zip :
 
 # ----------------------------------------
 # Condition
-ifeq ($(WINDOWS), yes)
-	EXEC = prog.exe
-else
-	EXEC = prog
+# ifeq ($(WINDOWS), yes)
+#	EXEC = prog.exe
+# else
+#	EXEC = prog
