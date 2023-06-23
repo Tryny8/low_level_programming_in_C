@@ -11,12 +11,19 @@ void times_table(void)
 	int m;
 	int resultat;
 
+	m = 0;
+
 	while (t <= 9)
 	{
-		for (m = 0; m <= 9; m++)
+		while (m <= 9)
 		{
 			resultat = (m * t);
 			printf("%02d, ", resultat);
+			m = m + 1;
+			if (m == 9)
+			{
+				_putchar('\n');
+			}
 		}
 		t = t + 1;
 		_putchar('\n');
