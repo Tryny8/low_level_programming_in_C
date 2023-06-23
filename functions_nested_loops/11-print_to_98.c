@@ -23,14 +23,14 @@ void print_to_98(int n)
 			}
 			else
 			{
-				printf("%d", resultat);
+				printf("%d\n", resultat);
 			}
 		}
 	}
 	else if (n == target)
 	{
 		resultat = n;
-		printf("%d", resultat);
+		printf("%d\n", resultat);
 	}
 	else if (n < target)
 	{
@@ -42,7 +42,7 @@ void print_to_98(int n)
 			}
 			else
 			{
-				printf("%d", resultat);
+				printf("%d\n", resultat);
 			}
 		}
 	}
