@@ -1,34 +1,48 @@
 #include "main.h"
 /**
- * jack_bauer  - affiche 24h d'affilé
+ * print_to_98  - affiche 24h d'affilé
+ * @n: nombre qui varie pour revenir à 98
  *
  * Return: On success 0.
  */
 
-void jack_bauer(void)
+void print_to_98(int n)
 {
-	int heure;
-	int minute;
+	int target;
+	int resultat;
 
-	for (heure = 0; heure <= 24; heure++)
+	target = 98;
+
+	if (n > target)
 	{
-		for (minute = 0; minute <= 60; minute++)
+		for (resultat = n; resultat >= target; resultat--)
 		{
-			if (heure != 24)
+			if (resultat != 98)
 			{
-				if (minute != 60)
-				{
-					printf("%02d:%02d\n", heure, minute);
-				}
-				else
-				{
-					minute = 0;
-					break;
-				}
+				printf("%d, ", resultat);
 			}
 			else
 			{
-				return;
+				printf("%d", resultat);
+			}
+		}
+	}
+	else if (n == target)
+	{
+		resultat = n;
+		printf("%d", resultat);
+	}
+	else if (n < target)
+	{
+		for (resultat = n; resultat <= target; resultat++)
+		{
+			if (resultat != 98)
+			{
+				printf("%d, ", resultat);
+			}
+			else
+			{
+				printf("%d", resultat);
 			}
 		}
 	}
