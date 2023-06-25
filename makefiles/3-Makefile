@@ -6,13 +6,13 @@ RM = rm
 
 all : $(NAME)
 
-clean :
+clean : 
 	rm -f ~* $(NAME)
 
-oclean :
-	rm -f *.o
+oclean : 
+	rm -f $(OBJ)
 
-fclean : oclean clean
+fclean : clean oclean
 
 re : oclean all
 
