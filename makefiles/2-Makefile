@@ -6,10 +6,10 @@ NAME = school
 all : $(NAME)
 
 %.o : %.c
-	$(CC) -o $(OBJ) -c $(SRC)
+	$(CC) -o $@ -c $<
 
 $(NAME) : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean : $(NAME)
-	rm -rf *.o
+	rm *.o
