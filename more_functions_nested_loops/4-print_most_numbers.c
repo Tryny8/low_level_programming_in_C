@@ -11,7 +11,8 @@ void print_numbers(void)
 
 	for (a = 48; a <= 57; a++)
 	{
-		_putchar(a);
+		if (a != 2 and a !=4)
+			_putchar(a);
 	}
 	_putchar(10);
 }
