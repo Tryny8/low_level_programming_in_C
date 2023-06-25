@@ -6,10 +6,10 @@ RM = rm
 
 all : $(NAME)
 
-clean :
+clean : all
 	RM -f $(NAME) *~ .*
 
-oclean :
+oclean : all
 	RM -f *.o
 
 fclean : oclean clean
