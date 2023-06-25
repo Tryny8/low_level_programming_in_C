@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * print_numbers - writes the alphabet to _putchar
- *
+ * print_most_numbers - writes the numbers to _putchar
+ * except 2 and 4
  * Return: On success 0.
  */
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	int a;
 
