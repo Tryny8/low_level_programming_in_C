@@ -15,7 +15,7 @@ void more_numbers(void)
 
 	nombre = 0;
 	repetition = 0;
-	compteur = 10;
+	compteur = 9;
 
 	while (repetition <= compteur)
 	{
@@ -23,7 +23,7 @@ void more_numbers(void)
 		{
 			for (b = 48; b <= 57; b++)
 			{
-				if (nombre <= 14) 
+				if (nombre <= 14)
 				{
 					if (nombre > 9)
 					{
