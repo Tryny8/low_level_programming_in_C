@@ -6,12 +6,6 @@ RM = rm
 
 all : $(NAME)
 
-%.o : %.c
-	$(CC) -o $@ -c $<
-
-$(NAME) : $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
-
 clean :
 	RM -f $(NAME) *~ .*
 
@@ -21,3 +15,9 @@ oclean :
 fclean : oclean clean
 
 re : oclean all
+
+%.o : %.c
+	$(CC) -o $@ -c $<
+
+$(NAME) : $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
