@@ -1,23 +1,13 @@
 #include "main.h"
 /**
- * _isupper - checks for uppercase character
- * @c: The charater c to stdoud
+ * reset_to_98 - reeset la valeur d'une varaible via une pointeur
+ * @*n: pointeur n
  *
  * Return: On success 0.
  */
 
-int _isupper(int c)
+void reset_to_98(int *n)
 {
-	int uppercase;
-
-	uppercase = c;
-
-	if ((uppercase >= 65) && (uppercase <= 90))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	int r = 98;
+	n = &a;
 }
