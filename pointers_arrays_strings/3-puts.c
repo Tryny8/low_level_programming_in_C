@@ -14,7 +14,8 @@ void _puts(char *str)
 	do {
 		caractereActuel = str[nombreDeCaracteres];
 		nombreDeCaracteres++;
-		_putchar(caractereActuel);
 	} while (caractereActuel != '\0');
+	nombreDeCaracteres--;
+	_putchar(caractereActuel);
 	_putchar(10);
 }
