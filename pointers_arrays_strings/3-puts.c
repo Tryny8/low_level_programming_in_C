@@ -18,7 +18,6 @@ void _puts(char *str)
 		{
 			_putchar(caractereActuel);
 		}
-		_putchar(caractereActuel);
 	} while (caractereActuel != '\0');
 	_putchar(10);
 }
