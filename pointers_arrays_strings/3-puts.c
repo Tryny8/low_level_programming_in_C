@@ -16,4 +16,5 @@ void _puts(char *str)
 		nombreDeCaracteres++;
 		_putchar(caractereActuel);
 	} while (caractereActuel != '\0');
+	_putchar(10);
 }
