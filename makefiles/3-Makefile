@@ -6,14 +6,11 @@ RM = rm -f
 
 all : $(NAME)
 
-$(OBJ) : $(SRC)
-	$(CC) -o $@ -c $<
-
 $(NAME) : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean :
-	$(RM) ~* $(NAME)
+	$(RM) ~* *.swp $(NAME)
 
 oclean :
 	$(RM) $(OBJ)
