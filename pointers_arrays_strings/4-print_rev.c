@@ -1,23 +1,31 @@
 #include "main.h"
 /**
- * _isupper - checks for uppercase character
- * @c: The charater c to stdoud
+ * _print_rev - imprime la chaine de caractère à l'envers
+ * @s: chaine de caractère
  *
  * Return: On success 0.
  */
 
-int _isupper(int c)
+void print_rev(char *s)
 {
-	int uppercase;
+	int len = 0;
+	char char_current = 0;
+	char caractereActuel = 0;
 
-	uppercase = c;
+	do {
+		char_current = s[len];
+		len++;
+	} while (char_current != '\0');
 
-	if ((uppercase >= 65) && (uppercase <= 90))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	len--;
+
+	do {
+		caractereActuel = s[len];
+		len--;
+		if (caractereActuel != '\0')
+		{
+			_putchar(caractereActuel);
+		}
+	} while (caractereActuel != '\0');
+	_putchar(10);
 }
