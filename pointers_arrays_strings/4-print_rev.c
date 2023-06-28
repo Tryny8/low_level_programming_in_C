@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _print_rev - imprime la chaine de caractère à l'envers
+ * print_rev - imprime la chaine de caractère à l'envers
  * @s: chaine de caractère
  *
  * Return: On success 0.
