@@ -23,6 +23,6 @@ void print_rev(char *s)
 		caractereActuel = s[len];
 		len--;
 		_putchar(caractereActuel);
-	} while (caractereActuel >= 0);
+	} while ((caractereActuel-1) >= 0);
 	_putchar(10);
 }
