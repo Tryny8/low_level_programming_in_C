@@ -1,23 +1,27 @@
 #include "main.h"
 /**
- * _isupper - checks for uppercase character
- * @c: The charater c to stdoud
+ * puts_half - imprime la moitier de la chaine
+ * @str: chaine de caractère
  *
  * Return: On success 0.
  */
 
-int _isupper(int c)
+void puts_half(char *str)
 {
-	int uppercase;
+	int len = 0;
 
-	uppercase = c;
-
-	if ((uppercase >= 65) && (uppercase <= 90))
+	while (str[len] != '\0')
 	{
-		return (1);
+		if (str[len] >= (str[len] / 2) + 1)
+		{
+			_putchar(str[len]);
+			len++;
+		}
+		else
+		{
+			len++;
+		}
+		len++;
 	}
-	else
-	{
-		return (0);
-	}
+	_putchar(10);
 }
