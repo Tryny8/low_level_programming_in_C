@@ -1,23 +1,22 @@
 #include "main.h"
 /**
- * _isupper - checks for uppercase character
- * @c: The charater c to stdoud
+ * puts2 - imprime les caractères paire
+ * @str: chaine de caractère
  *
  * Return: On success 0.
  */
 
-int _isupper(int c)
+void puts2(char *str)
 {
-	int uppercase;
+	int len = 0;
 
-	uppercase = c;
-
-	if ((uppercase >= 65) && (uppercase <= 90))
+	while (str[len] != '\0')
 	{
-		return (1);
+		if ((str[len] % 2) == 0)
+		{
+			_putchar(str[len]);
+		}
+		len++;
 	}
-	else
-	{
-		return (0);
-	}
+	_putchar(10);
 }
