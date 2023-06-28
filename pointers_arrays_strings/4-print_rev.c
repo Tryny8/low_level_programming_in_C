@@ -17,12 +17,10 @@ void print_rev(char *s)
 		len++;
 	} while (char_current != '\0');
 
-	len--;
-
 	do {
 		caractereActuel = s[len];
 		len--;
 		_putchar(caractereActuel);
-	} while ((caractereActuel-1) >= 0);
+	} while (caractereActuel >= 0);
 	_putchar(10);
 }
