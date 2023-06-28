@@ -22,10 +22,10 @@ void print_rev(char *s)
 	do {
 		caractereActuel = s[len];
 		len--;
-		if (caractereActuel != '\0')
+		if (caractereActuel != 0)
 		{
 			_putchar(caractereActuel);
 		}
-	} while (caractereActuel != '\0');
+	} while (caractereActuel != 0);
 	_putchar(10);
 }
