@@ -1,23 +1,23 @@
 #include "main.h"
 /**
- * _isupper - checks for uppercase character
- * @c: The charater c to stdoud
+ * rev_string - returne la chaine de caractère à l'envers
+ * @s: chaine de caractère
  *
  * Return: On success 0.
  */
 
-int _isupper(int c)
+void rev_string(char *s)
 {
-	int uppercase;
+	int len = 0;
 
-	uppercase = c;
-
-	if ((uppercase >= 65) && (uppercase <= 90))
+	while (s[len] != '\0')
 	{
-		return (1);
+		len++;
 	}
-	else
+	len--;
+	while (len >= 0)
 	{
-		return (0);
+		*s = (s[len]);
+		len--;
 	}
 }
