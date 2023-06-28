@@ -15,8 +15,13 @@ void puts2(char *str)
 		if ((str[len] % 2) == 0)
 		{
 			_putchar(str[len]);
+			len++;
 		}
-		len++;
+		else
+		{
+			_putchar(61);
+			len++;
+		}
 	}
 	_putchar(10);
 }
