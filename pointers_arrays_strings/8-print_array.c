@@ -16,16 +16,16 @@ void print_array(int *a, int n)
 		if (n > 256)
 		{
 			n = n - 1;
-			for (i = 0; i < n; i++)
-			{
-				printf("%d,", a[i]);
-				if (i != n)
-				{
-					printf(" ");
-				}
-			}
-			printf("\n");
 		}
+		for (i = 0; i < n; i++)
+		{
+			printf("%d,", a[i]);
+			if (i != n)
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
 	}
 	else
 	{
