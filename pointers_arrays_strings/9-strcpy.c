@@ -1,23 +1,25 @@
 #include "main.h"
 /**
- * _isupper - checks for uppercase character
- * @c: The charater c to stdoud
+ * *_strcpy - copie la chaine
+ * @dest: chaine originale
+ * @src: copie de la chaine
  *
  * Return: On success 0.
  */
 
-int _isupper(int c)
+char *_strcpy(char *dest, char *src)
 {
-	int uppercase;
+	int len = 0;
+	int i;
 
-	uppercase = c;
+	while (dest[len] != '\0')
+	{
+		len++;
+	}
 
-	if ((uppercase >= 65) && (uppercase <= 90))
+	for (i = 0; i <= len; i++)
 	{
-		return (1);
+		src[i] = dest[i];
 	}
-	else
-	{
-		return (0);
-	}
+	return (src);
 }
