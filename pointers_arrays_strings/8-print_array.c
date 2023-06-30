@@ -1,23 +1,23 @@
 #include "main.h"
 /**
- * _isupper - checks for uppercase character
- * @c: The charater c to stdoud
+ * print_array - imprime le tableau
+ * @a: tableau
+ * @n: nombre d'éléments du tableau
  *
  * Return: On success 0.
  */
 
-int _isupper(int c)
+void print_array(int *a, int n)
 {
-	int uppercase;
+	int i;
 
-	uppercase = c;
-
-	if ((uppercase >= 65) && (uppercase <= 90))
+	for (i = 0; i <= n; i++)
 	{
-		return (1);
+		printf("%d,", a[i]);
+		if (i != n)
+		{
+			printf(" ");
+		}
 	}
-	else
-	{
-		return (0);
-	}
+	printf("\n");
 }
