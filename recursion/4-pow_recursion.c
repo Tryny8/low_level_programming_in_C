@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _pow_recursion - calcul le factoriel d'un nombre
+ * _pow_recursion - calcul d'un nombre x exposant y
  * @x: valeur
  * @y: power
  *
@@ -11,13 +11,13 @@ int _pow_recursion(int x, int y)
 {
 	if (y >= 0)
 	{
-		if (y != 0)
+		if (y == 0)
 		{
-			return (_pow_recursion(x, y - 1) * x);
+			return (x * 1);
 		}
 		else
 		{
-			return (_pow_recursion(x, y) * x);
+			return (x * _pow_recursion(x, y - 1));
 		}
 	}
 	else
