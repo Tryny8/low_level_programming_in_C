@@ -1,12 +1,17 @@
 #include "main.h"
 /**
- * reset_to_98 - reeset la valeur d'une varaible via une pointeur
- * @n: pointeur n
+ * _puts_recursion - affiche la chaine de caractère via une focntion
+ * recursive.
+ * @s: chaine de caractère
  *
  * Return: On success 0.
  */
 
-void reset_to_98(int *n)
+void _puts_recursion(char *s)
 {
-	*n = 98;
+	if (*s != '\0')
+	{
+	putchar(*s);
+	_puts_recursion(s + 1);
+	}
 }
